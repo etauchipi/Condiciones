@@ -1,13 +1,18 @@
-﻿Public Class _Default
+﻿
+
+Public Class _Default
     Inherits Page
 
     Private _Calificacion As Int16
     Private _Valido As Boolean
-
+    Private rRegistro As wsCondiciones.Registro
+    Private wServicio As wsCondiciones.IwsCondicionesClient
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
         Me.imgClasif.Visible = False
         Me.clasificacion.Visible = False
+        Me.lblAlerta.Visible = False
+        Me.fecha.Visible = False
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -25,11 +30,14 @@
         Me.rblTipoId.ClearSelection()
         Me.rblTipoIngreso.ClearSelection()
         Me.clasificacion.Visible = False
+        Me.fecha.Visible = False
         Me.imgClasif.Visible = False
+        Me.lblAlerta.Visible = False
         imgClasif.ImageUrl = ""
         _Valido = False
         _Calificacion = 0
-        Me.lblAlerta.Visible = False
+        Me.panelMain.Visible = True
+        Me.BtFinalizar.Visible = True
 
     End Sub
 
@@ -97,10 +105,41 @@
         If (imgClasif.ImageUrl <> "") Then
             imgClasif.Visible = True
             Me.clasificacion.Visible = True
+            Me.fecha.Visible = True
+            Me.panelMain.Visible = False
+            Me.BtFinalizar.Visible = False
         Else
             imgClasif.Visible = False
         End If
 
+        If (_Valido) Then
+            'EnviarData()
+            Me.fecha.Text = "Fecha: " & Now().ToLongDateString & " - " & Now().ToLongTimeString
+        End If
+
     End Sub
+
+    Private Sub EnviarData()
+
+        rRegistro = New wsCondiciones.Registro
+        wServicio = New wsCondiciones.IwsCondicionesClient
+
+        rRegistro.Azul = IIf(_Calificacion > 0, True, False)
+        rRegistro.Sintomas = IIf(rblSintomas.SelectedValue = 1, True, False)
+        rRegistro.Prueba = IIf(rblPruebasDx.SelectedValue = 1, True, False)
+        rRegistro.Contacto = IIf(rblQuinceDias.SelectedValue = 1, True, False)
+        rRegistro.Empleado = IIf(rblTipoIngreso.SelectedValue = 1, False, True)
+        rRegistro.TipoIde = rblTipoId.SelectedItem.Text.Trim()
+        rRegistro.Identificacion = tbIdentificacion.Text.Trim()
+
+        Try
+            wServicio.Set_Ingreso(rRegistro)
+        Catch ex As Exception
+
+        End Try
+
+
+    End Sub
+
 
 End Class

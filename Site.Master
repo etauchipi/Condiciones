@@ -60,9 +60,8 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>-
-                    <asp:Label ID="lblFooter1" runat="server" Text="-"></asp:Label></p>
+            <footer class="col-md-4-bolder">
+                <p>&nbsp;<asp:Label ID="lblFooter1" runat="server"></asp:Label></p>
             </footer>
         </div>
 

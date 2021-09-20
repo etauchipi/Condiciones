@@ -68,6 +68,24 @@ Partial Public Class _Default
     Protected WithEvents clasificacion As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control fecha.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents fecha As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control panelMain.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents panelMain As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
     '''Control rblSintomas.
     '''</summary>
     '''<remarks>

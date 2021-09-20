@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e9192d97-f001-40f4-91e4-91bdf4b7dc85" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsCondiciones1.wsdl" MetadataType="Wsdl" ID="1b8b1732-f4ca-4eaa-9a12-7f68371da8bc" SourceId="1" SourceUrl="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc?wsdl" />
+    <MetadataFile FileName="wsCondiciones3.xsd" MetadataType="Schema" ID="158b8e7e-bcee-44dc-92ad-b4b6e71ea4b4" SourceId="1" SourceUrl="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsCondiciones31.xsd" MetadataType="Schema" ID="387bde07-70a9-4d64-8db2-7bf55e026561" SourceId="1" SourceUrl="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsCondiciones1.disco" MetadataType="Disco" ID="aa006007-4381-479c-9b05-9ee3520cba04" SourceId="1" SourceUrl="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc?disco" />
+    <MetadataFile FileName="wsCondiciones32.xsd" MetadataType="Schema" ID="8ecd3f24-8edf-4618-b6eb-3fe6d6e75da7" SourceId="1" SourceUrl="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

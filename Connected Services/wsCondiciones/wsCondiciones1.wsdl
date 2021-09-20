@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="wsCondiciones" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/wsCondiciones" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IwsCondiciones_Set_Ingreso_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Ingreso" />
+  </wsdl:message>
+  <wsdl:message name="IwsCondiciones_Set_Ingreso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_IngresoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsCondiciones_Inicializar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inicializar" />
+  </wsdl:message>
+  <wsdl:message name="IwsCondiciones_Inicializar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InicializarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IwsCondiciones">
+    <wsdl:operation name="Set_Ingreso">
+      <wsdl:input wsam:Action="http://tempuri.org/IwsCondiciones/Set_Ingreso" message="tns:IwsCondiciones_Set_Ingreso_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IwsCondiciones/Set_IngresoResponse" message="tns:IwsCondiciones_Set_Ingreso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inicializar">
+      <wsdl:input wsam:Action="http://tempuri.org/IwsCondiciones/Inicializar" message="tns:IwsCondiciones_Inicializar_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IwsCondiciones/InicializarResponse" message="tns:IwsCondiciones_Inicializar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MainBnd" type="tns:IwsCondiciones">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Set_Ingreso">
+      <soap:operation soapAction="http://tempuri.org/IwsCondiciones/Set_Ingreso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inicializar">
+      <soap:operation soapAction="http://tempuri.org/IwsCondiciones/Inicializar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCondiciones">
+    <wsdl:port name="MainBnd" binding="tns:MainBnd">
+      <soap:address location="http://192.9.10.12:3034/wsCondiciones/wsCondiciones.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

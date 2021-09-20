@@ -1615,6 +1615,8 @@ pre code {
   margin-right: -15px;
   margin-left: -15px;
   vertical-align:central;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .row-mensaje {
     margin-right: -15px;
@@ -1623,6 +1625,13 @@ pre code {
 } 
 .row-center {
     margin-left:100px;
+}
+.row-block {
+    display: inline-block;
+}
+.row-imagen{
+    margin: 10px;
+    align-content: center;
 }
 .row-no-gutters {
   margin-right: 0;
@@ -1683,15 +1692,24 @@ pre code {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 35px;
   border-style: double;
   border-radius: 4px;
   margin-block: 6px;
-    top: 40px;
+    top: 80px;
     left: 0px;
 }
 .col-md-4-a{
     height: 30px;
+    padding-left: 35px;
+}
+.col-md-4-bolder {
+    font-weight: bolder;
+}
+.footer-site {
+    font-weight: bolder;
+    font-size: small;
+    text-align: center;
 }
 .col-md-4-rojo {
     font-size: large;
@@ -3188,6 +3206,9 @@ fieldset[disabled] a.btn {
   background-color: #e03e52;
   border-color: #ccc;
 }
+.btn-default-option {
+margin-left:15px;
+}
 .btn-default:focus,
 .btn-default.focus {
   color: #333;
@@ -3537,7 +3558,7 @@ fieldset[disabled] .btn-link:focus {
 .btn-lg,
 .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.3333333;
   border-radius: 6px;
 }
@@ -5069,7 +5090,7 @@ a.badge:focus {
   color: inherit;
 }
 .jumbotron p {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-size: 21px;
   font-weight: 200;
 }
@@ -5083,7 +5104,7 @@ a.badge:focus {
   border-radius: 6px;
 }
 .jumbotron .container {
-  max-width: 100%;
+  max-width: 90%;
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
@@ -6648,11 +6669,13 @@ button.close {
   position: fixed;
 }
 .img_imagen {
-    height:170px;
+    height: 170px;
     width: 170px;
     border: none;
     margin-top: 40px;
     border-block-style: none;
+    display: block;
+    margin: auto;
 }
 .bt_alaDerecha {
     float: right;
