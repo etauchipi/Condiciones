@@ -23,12 +23,12 @@
                 </asp:RadioButtonList>
         </div>
         <div class="col-md-4 col-md-4-a col-md-4-bolder">
-            Identificación:&nbsp;&nbsp;<asp:TextBox ID="tbIdentificacion" runat="server" Width="150px"></asp:TextBox>
+            Identificación:&nbsp;&nbsp;<asp:TextBox ID="tbIdentificacion" runat="server" Width="50%"></asp:TextBox>
         </div>
         <div class="col-md-4 col-md-4-a">
             <asp:RadioButtonList ID="rblTipoIngreso" runat="server" RepeatDirection="Horizontal"  >
             <asp:ListItem Value="1">&nbsp;Paciente/Visitante&nbsp;&nbsp;</asp:ListItem>
-            <asp:ListItem Value="0">&nbsp;Colaborador Clínica</asp:ListItem>
+            <asp:ListItem Value="0">&nbsp;Colaborador</asp:ListItem>
             </asp:RadioButtonList>
         </div>  
     </div>
